@@ -26,23 +26,27 @@
 [MVC04 예제 - FrontController+POJO]
 <table class="table table-bordered">
   <tr>
-    <td>번호</td>
-    <td>아이디</td>
-    <td>지역</td>
-    <td>urllink</td> 
+    <td>번호</td> 
+    <td>업소명</td>
+    <td>주소</td>
+    <td>전화번호</td>
+    <td>영업일</td>
+    <td>링크</td> 
     <td>삭제</td>
   </tr>
   <c:forEach var="vo" items="${list}">
     	  <tr>
-    	    <td>${vo.num}</td>
-    	    <td><a href="${ctx}/memberContent.do?num=${vo.num}">${vo.id}</a></td>
+    	    <td><a href="${ctx}/teateHouseContent.do?num=${vo.num}">${vo.num}</a></td> 
+    	    <td>${vo.title}</td>
     	    <td>${vo.area}</td>
-    	    <td>${vo.urllink}</td> 
+    	    <td>${vo.tel}</td>
+    	    <td>${vo.holiday}</td>
+    	    <td><a href="${vo.urllink}">${vo.urllink}</a></td> 
     	    <td><input type="button" value="삭제" class="btn btn-warning" onclick="deleteFn(${vo.num})"></td>
     	  </tr>    	 
   </c:forEach>
   <tr>
-  <td colspan="8" align="right"><input type="button" value="회원가입" class="btn btn-primary" onclick="location.href='${ctx}/memberRegister.do'"/></td>
+  <td colspan="8" align="right"><input type="button" value="맛집등록" class="btn btn-primary" onclick="location.href='${ctx}/teateHouseRegister.do'"/></td>
   </tr>
 </table>
 </body>

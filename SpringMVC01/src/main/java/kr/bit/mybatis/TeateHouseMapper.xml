@@ -7,5 +7,29 @@
     <select id="teateHouseList" resultType="TeateHouseVo">
        select * from teatehouse
     </select> 
-     
+ 
+    <insert id="teateHouseInsert" parameterType="TeateHouseVo">
+        insert into teatehouse(title,area,tel,holiday,urllink)
+        values(
+        #{title},
+        #{area},
+        #{tel},
+        #{holiday},
+        #{urllink} 
+        )       
+    </insert> 
+    
+    
+    <select id="teateHouseContent" parameterType="Integer" resultType="TeateHouseVo">        
+        select * from teatehouse where num=#{num}
+    </select>
+    
+    <update id="teateHouseUpdate" parameterType="TeateHouseVo">        
+        update teatehouse 
+          set area    = #{area}
+             ,tel     = #{tel}
+             ,holiday = #{holiday}
+             ,urllink = #{urllink}
+        where num=#{num}
+    </update>    
 </mapper>

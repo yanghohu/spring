@@ -22,4 +22,33 @@ public class TeateHouseDao {
 		   return list;
 	}
 
+	// 맛집리스트인서트
+	public int teateHouseInsert(TeateHouseVo vo) {
+		// TODO Auto-generated method stub
+	   SqlSession session=sqlSessionFactory.openSession();
+	   int cnt=session.insert("teateHouseInsert", vo);
+	   session.commit();
+	   session.close();//반납
+	   return cnt; 
+	}
+
+	// 맛집상세보기
+	public TeateHouseVo teateHouseContent(int num) {
+		// TODO Auto-generated method stub
+		SqlSession session=sqlSessionFactory.openSession();
+		TeateHouseVo vo=session.selectOne("teateHouseContent", num);
+		return vo;
+	}
+	
+	// 맛집업데이트
+	public int teateHouseUpdate(TeateHouseVo vo) {
+		// TODO Auto-generated method stub
+		SqlSession session=sqlSessionFactory.openSession();
+		int cnt=session.update("teateHouseUpdate", vo);
+		session.commit();
+		session.close();
+		return cnt;
+	}
+ 
+
 }

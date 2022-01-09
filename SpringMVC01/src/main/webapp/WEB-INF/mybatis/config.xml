@@ -5,6 +5,6 @@
 <configuration>
   <typeAliases>
       <typeAlias type="kr.bit.model.MemberVO" alias="memberVO"/>    
-      <typeAlias type="kr.bit.model.TeateHouseVo" alias="TeateHouseVO"/>     
+      <typeAlias type="kr.bit.model.TeateHouseVo" alias="teateHouseVO"/>     
   </typeAliases>   
  </configuration>

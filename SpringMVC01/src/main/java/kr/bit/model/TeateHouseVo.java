@@ -1,18 +1,30 @@
 package kr.bit.model;
 
 public class TeateHouseVo {
-	private int num;
-	private String id;
+	private int num; 
+	private String title;
 	private String area;
+	private String tel;
+	private String holiday;
 	private String urllink;
 	 
 	public TeateHouseVo() { }
-	 
-	public TeateHouseVo(int num, String id, String area, String urllink) { 
+
+	public TeateHouseVo(int num, String title, String area, String tel,String holiday, String urllink) { 
 		this.num = num;
-		this.id = id;
+		this.title = title;
 		this.area = area;
+		this.tel = tel;
+		this.holiday = holiday;
 		this.urllink = urllink;
+	}
+
+	public String getHoliday() {
+		return holiday;
+	}
+
+	public void setHoliday(String holiday) {
+		this.holiday = holiday;
 	}
 
 	public int getNum() {
@@ -23,12 +35,12 @@ public class TeateHouseVo {
 		this.num = num;
 	}
 
-	public String getId() {
-		return id;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getArea() {
@@ -37,6 +49,14 @@ public class TeateHouseVo {
 
 	public void setArea(String area) {
 		this.area = area;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 
 	public String getUrllink() {
@@ -49,7 +69,8 @@ public class TeateHouseVo {
 
 	@Override
 	public String toString() {
-		return "TeateHouseVo [num=" + num + ", id=" + id + ", area=" + area + ", urllink=" + urllink + "]";
+		return "TeateHouseVo [num=" + num + ", title=" + title + ", area=" + area + ", tel=" + tel + ", holiday="
+				+ holiday + ", urllink=" + urllink + "]";
 	}	
-
+ 	
 }
